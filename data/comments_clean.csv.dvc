@@ -1,0 +1,5 @@
+outs:
+- md5: ed302c260ddf3b57cc8daeee959c613b
+  size: 3177
+  hash: md5
+  path: comments_clean.csv

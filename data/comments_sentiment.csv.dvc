@@ -1,0 +1,5 @@
+outs:
+- md5: 46e82f27dc5a389e45a7a8dfedb37e8f
+  size: 3347
+  hash: md5
+  path: comments_sentiment.csv
