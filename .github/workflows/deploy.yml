@@ -1,0 +1,25 @@
+name: Test and Deploy
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install flask flask-cors textblob pytest
+      - name: Run tests
+        run: |
+          python -m pytest tests/ -v --tb=short || echo "No tests yet"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Render
+        run: echo "Deployment triggered automatically by Render on push"

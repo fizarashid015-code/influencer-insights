@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Influencer Insights",
+  "version": "1.0",
+  "description": "Analyze YouTube comment sentiment",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["*://www.youtube.com/watch*"],
+    "js": ["content.js"]
+  }]
+}
